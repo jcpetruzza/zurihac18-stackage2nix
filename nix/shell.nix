@@ -5,6 +5,6 @@ nixpkgs.haskell.lib.buildStackProject {
 
   buildInputs = with nixpkgs.pkgs; [
     git   # used by stack when downloading github repos, etc
-    (haskell.packages.stackage.lts-116.ghcWithPackages (ps: [ps.text]))
+    ((haskell.packages.stackage.lib.callStackage2nix "zurihac18" ../.).ghcWithPackages (ps: [ps.text]))
   ];
 }
