@@ -1,0 +1,11 @@
+resolver: lts-11.12
+
+packages:
+- foo
+- bar
+
+# extra-deps: []
+
+nix:
+  enable: true
+  shell-file: nix/shell.nix
