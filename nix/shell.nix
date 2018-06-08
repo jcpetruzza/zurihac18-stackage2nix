@@ -1,4 +1,4 @@
-{nixpkgs ? import <nixpkgs> {}}:
+{nixpkgs ? import ./nixpkgs.nix {}}:
 
 nixpkgs.haskell.lib.buildStackProject {
   name = "test-nix-thing";
